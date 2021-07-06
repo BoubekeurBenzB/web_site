@@ -1,20 +1,23 @@
 <template>
   <div class="banner">
-    <h1>{{ nom }}</h1>
-    <h2>{{ titre }}</h2>
-    <div class="links">
-      <ul class="list">
-        <li class="list-item">
-          <a href="https://www.linkedin.com/in/boubekeur-benzaid/">
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </li>
-        <li class="list-item">
-          <a href="https://github.com/BoubekeurBenzB">
-            <i class="fab fa-github-square"></i>
-          </a>
-        </li>
-      </ul>
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>{{ nom }}</h1>
+      <h2>{{ titre }}</h2>
+      <div class="links">
+        <ul class="list">
+          <li class="list-item">
+            <a href="https://www.linkedin.com/in/boubekeur-benzaid/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="list-item">
+            <a href="https://github.com/BoubekeurBenzB">
+              <i class="fab fa-github-square"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -31,9 +34,9 @@ export default {
 
 <style lang="scss" scoped>
 .banner {
-  // background-image: url(../assets/Banner.png);
-  // background-repeat: no-repeat;
-  // background-size: cover;
+  background-image: url(../assets/Banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #4d4d4d;
   background-position: center center;
   height: 90vh;
@@ -42,6 +45,19 @@ export default {
   align-items: center;
   flex-direction: column;
   position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #444;
+  opacity: 0.5;
+}
+.content {
+  z-index: 2;
 }
 h1 {
   color: #f1f1f1;
