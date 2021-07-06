@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <Navbar></Navbar>
-    <HelloWorld msg="Boubekeur BENZAID"/>
+    <Banner nom="Boubekeur BENZAID" titre="Front-End Developer"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Banner from './components/Banner.vue'
 import Navbar from './components/Navbar.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Banner,
     Navbar
   }
 }
@@ -25,7 +25,7 @@ export default {
   box-sizing: border-box;
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
