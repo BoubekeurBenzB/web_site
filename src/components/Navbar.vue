@@ -71,26 +71,27 @@ export default {
 
 /** tablet & Ipad */
 @media screen and (max-width: 1024px) {
+    .icon-toggle {
+        display: block;
+    }
     .menu {
         display: none;
     }
     .menu-active {
         background-color: #17151a;
         border-top: 1px solid #babcc5;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        display: block;
         position: absolute;
         left: 0;
         right: 0;
         top: 3.9rem;
     }
+    .menu-item {
+        width: 100%;
+        text-align: center;
+    }
     .menu-item:last-child {
         margin-right: 0;
-    }
-    .icon-toggle {
-        display: block;
     }
 }
 </style>

@@ -39,7 +39,7 @@ export default {
   background-size: cover;
   background-color: #4d4d4d;
   background-position: center center;
-  height: 90vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,17 +62,17 @@ export default {
 }
 h1 {
   color: #f1f1f1;
-  font-size: 8em;
+  font-size: clamp(35px, 8vw, 80px);
 }
 h2 {
   color: #d49e39;
-  font-size: 4em;
+  font-size: clamp(25px, 5vw, 60px);
 }
 .links {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
-  font-size: 2.5rem;
+  font-size: clamp(30px, 5vw, 40px);
 }
 .list {
   list-style: none;
@@ -80,5 +80,22 @@ h2 {
 .list a {
   color: #f1f1f1;
   text-decoration: none;
+}
+
+/** responsive */
+
+/** tablet & ipad */
+@media screen and (max-width: 1024px) {
+  .links {
+    top: 75%;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+  .list-item {
+    display: inline-block;
+    margin-left: 1rem;
+  }
 }
 </style>
