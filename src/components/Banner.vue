@@ -1,5 +1,5 @@
 <template>
-  <div class="banner">
+  <section class="banner">
     <div class="overlay"></div>
     <div class="content">
       <h1>{{ nom }}</h1>
@@ -19,7 +19,7 @@
         </ul>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -53,17 +53,16 @@ export default {
   right: 0;
   left: 0;
   z-index: 1;
-  background-color: #444;
+  background-color: #17151a;
   opacity: 0.5;
 }
 .content {
+  text-align: center;
   z-index: 2;
 }
 h1 {
   color: #f1f1f1;
   font-size: 8em;
-  max-width: 800px;
-  text-align: center;
 }
 h2 {
   color: #d49e39;
@@ -71,8 +70,8 @@ h2 {
 }
 .links {
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  right: 1rem;
+  bottom: 1rem;
   font-size: 2.5rem;
 }
 .list {

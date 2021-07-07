@@ -1,5 +1,8 @@
 <template>
     <div class="navbar">
+        <div class="icon-toggle" @click="toggleMenu">
+            <i class="fas fa-bars"></i>
+        </div>
         <ul class="menu">
             <li class="menu-item">About</li>
             <li class="menu-item">Skills</li>
@@ -12,7 +15,15 @@
 
 <script>
 export default {
-    name: 'Navbar'
+    name: 'Navbar',
+
+    methods: {
+        toggleMenu() {
+            const menu = document.querySelector('.menu');
+
+            menu.classList.toggle('menu-active');
+        }
+    }
 }
 </script>
 
@@ -28,19 +39,58 @@ export default {
     right: 0;
     z-index: 10;
 }
+.icon-toggle {
+    display: none;
+    color: #babcc5;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-right: 1rem;
+}
 .menu {
     display: flex;
     list-style: none;
 }
 .menu-item {
+    font-weight: bold;
+    text-transform: uppercase;
     padding: 1rem;
     color: #babcc5;
     cursor: pointer;
 }
-.menu-item:hover {
+.item-active,
+.menu-item:hover,
+.icon-toggle:hover {
     color: #f1f1f1;
 }
 .menu-item:last-child {
-    margin-right: 5rem;
+    margin-right: 3rem;
+}
+
+/** responsive */
+
+/** tablet & Ipad */
+@media screen and (max-width: 1024px) {
+    .menu {
+        display: none;
+    }
+    .menu-active {
+        background-color: #17151a;
+        border-top: 1px solid #babcc5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 3.9rem;
+    }
+    .menu-item:last-child {
+        margin-right: 0;
+    }
+    .icon-toggle {
+        display: block;
+    }
 }
 </style>
