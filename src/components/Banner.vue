@@ -54,7 +54,7 @@ export default {
   left: 0;
   z-index: 1;
   background-color: #17151a;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 .content {
   text-align: center;
@@ -62,11 +62,11 @@ export default {
 }
 h1 {
   color: #f1f1f1;
-  font-size: clamp(35px, 8vw, 80px);
+  font-size: clamp(40px, 8vw, 80px);
 }
 h2 {
   color: #d49e39;
-  font-size: clamp(25px, 5vw, 60px);
+  font-size: clamp(30px, 5vw, 60px);
 }
 .links {
   position: absolute;
@@ -87,7 +87,7 @@ h2 {
 /** tablet & ipad */
 @media screen and (max-width: 1024px) {
   .links {
-    top: 75%;
+    top: 80%;
     bottom: 0;
     left: 50%;
     right: 0;

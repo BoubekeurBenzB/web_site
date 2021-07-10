@@ -8,6 +8,10 @@
       citation="“For me, web development is more than coding. It's a canvas with a blank page and I am the artist to paint it with colors of coding”."
       location="Based in Seattle"
     />
+    <Skills
+      title="Programming skills"
+      text="Front end engineer believing in the power of web development. Experienced in all stages of advanced front end development. Focused on single-page application development, CSS/JS animations, semantics, accessibility, and progressive enhancement. However, I'm keen on exploring new languages and I always try to stay up-to-minute. Apart from these, I have other computer skills, such as I fluently use Adobe XD and Sketch for designing the websites before coding them. I also have basic knowledge in 3D Max Studio and Adobe After Effect and I use them as a hobby."
+    />
   </div>
 </template>
 
@@ -15,13 +19,15 @@
 import Banner from './components/Banner.vue'
 import Navbar from './components/Navbar.vue'
 import About from './components/About.vue'
+import Skills from './components/Skills.vue'
 
 export default {
   name: 'App',
   components: {
     Banner,
     Navbar,
-    About
+    About,
+    Skills,
   }
 }
 </script>
